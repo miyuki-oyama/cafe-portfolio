@@ -1,0 +1,348 @@
+@charset "UTF-8";
+@import url("destyle.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kaisei Tokumin", "Kaisei Tokumin",  "Kaisei Tokumin",serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  color: #887b6e;
+  background-color: #fff;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  padding: 0;
+  overflow: visible; 
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  height: auto; 
+  background-image: url("images/gallery_header.jpg");
+  background-size: cover;
+  background-position: center;
+   padding-left: 200px;
+}
+
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+h1 {
+  margin: 0 auto;
+  font-size: 6.0rem;
+  font-family: "Courgette", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #fefefd;
+  text-shadow: 2px 2px 5px #7b4304;
+}
+
+@keyframes floatY {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.side-info h2 {
+  font-size: 17px;
+  font-family: "Kaisei Tokumin";
+  padding: 20px;
+  font-weight: 500;
+  color: #4f3b26;
+
+}
+
+.side-nav {
+  width: 200px;
+  background-color: #bb9e7b;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100vh;
+  overflow-y: auto;
+  text-align: center;
+  line-height: 2.5;
+  color: #4f3b26;
+   scrollbar-width: none;
+  -ms-overflow-style: none;   
+}
+
+.side-nav li {
+  border-bottom: 1px solid #ccc; 
+  
+}
+
+.side-nav li:nth-child(odd) a {
+  background-color: #f2d5ae; 
+  display: block;
+  width: 200px;
+}
+
+.side-nav li:nth-child(even) a{
+  background-color: #bb9e7b; 
+  display: block;
+  width: 200px;
+}
+.side-info {
+  font-family: "Noto Serif JP", serif;
+  color: #4f3b26;
+  line-height: 1.5;
+  text-align: center;
+}
+
+
+.side-info dl {
+  margin: 0 auto;
+  max-width: 220px;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.side-info dl dt {
+  font-weight: 700 !important; 
+  font-size: 1rem;
+  margin: 0px 0 5px;
+}
+.side-info dl dd {
+  font-size: 0.95rem;
+  color: #4f3b26;
+  margin: 0 0 10px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.side-nav li a:hover {
+  background-color: #734906; 
+  color: white; 
+}
+
+footer {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #fff;
+  text-align: center;
+  margin-left: 120px;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  width: 30px;
+  height: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: #fefdfd;
+  border-radius: 2px;
+}
+main {
+  flex-grow: 1;
+  max-width: calc(100% - 200px);
+  padding: 20px;
+  background-color: rgba(247, 230, 200, 0.545);
+  margin-left: 200px;
+
+}
+
+.gallery-intro h3 {
+  font-size: 2.0rem;
+  text-align: center;
+  margin-top: 50px;
+}
+.gallery-intro {
+  text-align: center;
+}
+.gallery-intro p {
+  font-size: 1.0rem;
+  line-height: 1.0rem; 
+  text-align: center;
+  padding-top: 20px;
+  position: relative;
+  display: inline-block;
+  color: #666;
+}
+
+.gallery-intro p::before,
+.gallery-intro p::after {
+  content: "";
+  position: absolute;
+  top: 80%;
+  transform: translateY(-50%);
+  width: 50px; 
+  height: 1px;
+  background-color: #aaa;
+}
+
+.gallery-intro p::before {
+  left: -60px; 
+}
+
+.gallery-intro p::after {
+  right: -60px;
+}
+
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-bottom: 40px;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  width: 45%; /* 2枚並べたいので約半分 */
+  max-width: 500px;
+  border: 5px solid #ffffff; /* フレーム色 */
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* 影 */
+  border-radius: 10px; /* 角を丸くする場合 */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+footer {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #e7caa8;
+  text-align: center;
+  margin-left: 90px;
+  position: relative;
+  z-index: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  header {
+     padding-left: 0 !important;
+  }
+
+  .side-nav {
+    position: fixed;
+    top: 0;
+     left: auto;
+    right: -100%;
+    width: 200px;
+    height: 100vh;
+    background-color: #bb9e7b;
+    transition: right 0.3s ease;
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px; 
+  }
+.side-nav li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .side-nav li a {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .side-nav.open {
+    right: 0;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 30px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+  }
+
+  .hamburger span {
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+  }
+  main {
+  margin-left: 0 !important;
+  max-width: 100% !important;
+  width: 100%;
+  padding: 20px;
+}
+
+.gallery-grid {
+  gap: 20px
+}
+
+footer {
+     margin-left: 0 !important;
+    padding: 20px;
+    font-size: 14px;
+    background-color: #fff; 
+    text-align: center;
+    z-index: 1;
+  }
+}

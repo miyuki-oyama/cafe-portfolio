@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>〇〇県/moricafe/心を癒すカフェ</title>
+  <meta name="description" content="自然豊かな場所に佇む、心を癒すカフェ。自家焙煎コーヒーと豚の角煮が人気。WI-FI完備でゆったりとした時間を過ごせます。">
+  <link rel="stylesheet" href="destyle.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courgette&family=Kaisei+Tokumin&family=Kiwi+Maru:wght@300;400&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>
+        <a href="/">
+          <img src="images/logo_moricafe.png" alt="mori cafe" class="logo-float" />
+        </a>
+      </h1>
+    </div>
+    <button class="hamburger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="container">
+    <nav class="side-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="#access">Access</a></li>
+      </ul>
+      <div class="side-info">
+        <h2>Contact / Reservation</h2>
+        <dl>
+          <dt>営業時間/</dt>
+          <dd>平日：11：00～17：00</dd>
+          <dd>土日祝：10：00～18：00</dd>
+          <dt>定休日/</dt>
+          <dd>火曜日・水曜日</dd>
+          <dd>(祝日の場合は翌平日)</dd>
+          <dt>お問い合わせ/</dt>
+          <dd>TEL　123-4567</dd>
+          <dd>営業日14：00～17：00</dd>
+        </dl>
+      </div>
+    </nav>
+
+    <article>
+      <section id="about">
+        <div class="about-container">
+          <div class="about-wrapper">
+            <h3>About</h3>
+            <p>自然豊かな場所に佇む、心を癒すカフェ。</p>
+            <p>ゆっくりと流れる時間の中で、ほっと心を休めていただける空間をご用意しました。</p>
+            <p>地元の食材を活かして丁寧に仕上げたとろける豚の角煮や、</p>
+            <p>店主こだわりのパスタ。毎朝手作りするなめらかプリンや、</p>
+            <p>地元のフルーツを使ったやさしいデザート、</p>
+            <p>香り高い自家焙煎コーヒーをお楽しみいただけます。</p>
+            <p>心を込めた一皿が、あなたの今日にそっと寄り添えますように。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="access">
+        <div class="access-wrapper">
+          <h2>Access</h2>
+          <div class="access-inner">
+            <div class="access-info">
+              <dl>
+                <dt>mori cafe</dt>
+                <dd>〒123-4567　〇〇県〇〇市〇〇町1234-5</dd>
+                <dt>アクセス方法</dt>
+                <dd>国道〇線から北に車で10分</dd>
+                <dt>駐車場</dt>
+                <dd>店舗前に専用駐車場4台分あり。</dd>
+              </dl>
+            </div>
+            <div class="map-wrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3240.8319450162026!2d139.76706140000002!3d35.681139800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1748484417611!5m2!1sja!2sjp"
+                width="100%"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    </div>
+    <footer class="site-footer">
+      <p>&copy; mori cafe</p>
+    </footer>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const sideNav = document.querySelector(".side-nav");
+
+    hamburger.addEventListener("click", () => {
+      sideNav.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>moricafe</title>
+  <link rel="stylesheet" href="destyle.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courgette&family=Kaisei+Tokumin&family=Kiwi+Maru:wght@300;400&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+    <h1>Gallery</h1>
+    </div>
+    <button class="hamburger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="container">
+    <nav class="side-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="index.html#access">Access</a></li>
+      </ul>
+      <div class="side-info">
+        <h2>Contact / Reservation</h2>
+        <dl>
+          <dt>営業時間/</dt>
+          <dd>平日：11：00～17：00</dd>
+          <dd>土日祝：10：00～18：00</dd>
+          <dt>定休日/</dt>
+          <dd>火曜日・水曜日</dd>
+          <dd>(祝日の場合は翌平日)</dd>
+          <dt>お問い合わせ/</dt>
+          <dd>TEL　123-4567</dd>
+          <dd>営業日14：00～17：00</dd>
+        </dl>
+      </div>
+    </nav>
+    <main>
+    <section class="gallery-intro">
+    <h3>mori cafe Gallery</h3>
+    <p>心を癒す空間を</p>
+    </section>
+    <section class="gallery-grid">
+     <div class="gallery-item"><img src="images/gallery-1.jpg" alt="店外観"></div>
+    <div class="gallery-item"><img src="images/gallery2.jpg" alt="店内風景"></div>
+    </section> 
+     <section class="gallery-grid">
+    <div class="gallery-item"><img src="images/gallery3.jpg" alt="コーヒー豆"></div>
+    <div class="gallery-item"><img src="images/gallery4.jpg" alt="コーヒー"></div>
+    </section>
+    <section class="gallery-grid">
+    <div class="gallery-item"><img src="images/gallery5.jpg" alt="角煮定食"></div>
+    <div class="gallery-item"><img src="images/gallery6.jpg" alt="カルボナーラ"></div>
+    </section>
+    <section class="gallery-grid">
+    <div class="gallery-item"><img src="images/gallery7.jpg" alt="プリン"></div>
+    <div class="gallery-item"><img src="images/gallery8.jpg" alt="チーズケーキ"></div>
+  </section>  
+  </main>
+  </div>
+  <footer class="site-footer">
+    <p>&copy; mori cafe</p>
+  </footer>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const sideNav = document.querySelector(".side-nav");
+
+    hamburger.addEventListener("click", () => {
+      sideNav.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
+
