@@ -355,7 +355,13 @@ footer {
     font-size: 1rem;
   }
 
-  main {
+.menu-heading {
+    display: block;
+    text-align: center;
+    margin: 40px auto;
+  }
+
+ main {
   margin-left: 0 !important;
   max-width: 100% !important;
   width: 100%;
